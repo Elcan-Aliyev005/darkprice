@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.MuiPaginationItem-page.css-2ge3ma {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid #333;
+}
+
+.MuiPaginationItem-previousNext.css-2ge3ma {
+  background-color: #fff !important;
+  color: #000;
+
+}
+
+.css-2ge3ma.Mui-selected {
+  background-color: #fff !important;
+  color: #000;
+  transition: .1s;
+
+}
+
+.MuiPaginationItem-previousNext.css-2ge3ma:hover,
+.MuiPaginationItem-page.css-2ge3ma:hover,
+.css-2ge3ma.Mui-selected:hover {
+  scale: 1.1;
+}
+
+.MuiPaginationItem-page.css-2ge3ma:hover {
+  background-color: #1D183A !important;
+  color: #fff;
+}
+
+.MuiPaginationItem-ellipsis.css-btxnvc-MuiPaginationItem-root {
+  cursor: default;
+  user-select: none;
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.css-240cud.ant-modal .ant-modal-header,
+.css-240cud.ant-modal .ant-modal-content,
+:where(.css-dev-only-do-not-override-240cud).ant-modal .ant-modal-content,
+:where(.css-dev-only-do-not-override-240cud).ant-modal .ant-modal-header {
+  background-color: #1b1b1e;
+}
+
+.css-240cud.ant-modal .ant-modal-title,
+:where(.css-dev-only-do-not-override-240cud).ant-modal .ant-modal-title {
+  color: #fff;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333 !important;
+  position: relative;
+}
+
+.css-240cud.ant-modal.live .ant-modal-title::after,
+:where(.css-dev-only-do-not-override-240cud).ant-modal.live .ant-modal-title::after {
+  content: "";
+  text-align: center;
+  font-size: 8px;
+  height: 6px;
+  width: 6px;
+  transform: translateX(4px);
+  padding: 1px 3px;
+  top: 2px;
+  border-radius: 2px;
+  background-color: red;
+  position: absolute;
+}
+
+svg[data-icon="close"] {
+  color: #fff;
+}
+
+@keyframes example {
+  0% {
+    scale: .9
+  }
+
+  50% {
+    scale: 1;
+  }
+
+  100% {
+    scale: .9;
+  }
+}
+
+#start-btn {
+  box-shadow: 0px 0px 3px #fff;
+  cursor: pointer;
+  scale: 1;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.glass-effect {
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid #333;
+}
+
+#search-input::placeholder {
+  color: #000;
+  font-weight: 500;
+}
+
+.ant-drawer-header {
+  border-bottom: 1px solid #333 !important;
+}
+
+
+.ant-modal.css-240cud.history-modal,
+:where(.css-dev-only-do-not-override-240cud).ant-modal.history-modal {
+  color: #fff;
+}
+
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
