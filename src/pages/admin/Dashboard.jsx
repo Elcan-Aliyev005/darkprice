@@ -3,7 +3,7 @@ import DashboardMenu from '../../components/ui/admin/menu/Menu'
 
 function Dashboard() {
     return (
-        <div>dsd</div>
+        <div>Genci yek</div>
     )
 }
 
