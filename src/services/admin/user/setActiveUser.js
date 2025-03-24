@@ -1,8 +1,8 @@
-import { Api } from "../../axios/api"
+import { Api } from "../../../axios/api"
 
 export const setActiveUser = async (id, isActive) => {
     try {
-        const data = await Api.put('/api/db/set-active',{
+        const data = await Api.put('/api/db/set-active-user',{
             id,
             isActive
         })

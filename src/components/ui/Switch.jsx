@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Switch } from 'antd';
-import { setActiveUser } from '../../services/admin/setActiveUser';
+import { setActiveUser } from '../../services/admin/user/setActiveUser';
 
 
-const SwitchBox = ({ isActive, id }) => {
+const SwitchBox = ({ isActive, id, updateFc }) => {
     const [active, setActive] = useState(isActive)
     const onChange = (checked) => {
         setActive(!active);
         (async () => {
             try {
-              const data =  await setActiveUser(id, !active)
+              const data =  await updateFc(id, !active)
             }
             catch (e) { 
                 console.log(e);

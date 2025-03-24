@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import Title from '../../../components/layout/admin/Title'
-import SwitchBox from '../../../components/ui/Switch'
-import { getAllUsers } from '../../../services/admin/user/getAllUsers'
 import { Spin } from 'antd'
-import UserCard from '../../../components/ui/admin/UserCard'
+import { getAllStore} from '../../../services/admin/stores/getAllStores'
+import StoreCard from '../../../components/ui/admin/StoreCard'
 import { nanoid } from 'nanoid'
 
-function UserList() {
-  const [users, setUser] = useState([])
+function StoreList() {
+  const [stores, setStores] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     (async () => {
       try {
-        const data = await getAllUsers()
-        setUser(data)
+        const data = await getAllStore()
+        setStores(data)
         console.log(data);
       }
       finally {
@@ -28,7 +27,7 @@ function UserList() {
 
   return (
     <div className=' '>
-      <Title title={"User list"} />
+      <Title title={"Store list"} />
       <div className='p-[50px] overflow-auto h-[calc(100vh-66px)] '>
         {
           loading ?
@@ -37,7 +36,7 @@ function UserList() {
             </div>
             : (
               <div className='flex items-center flex-wrap  gap-[30px]'>
-                {users.map(item => <UserCard key={nanoid()} {...item} />)}
+                {stores.map(item => <StoreCard key={nanoid()} {...item} />)}
               </div>
 
             )}
@@ -48,4 +47,4 @@ function UserList() {
   )
 }
 
-export default UserList
+export default StoreList

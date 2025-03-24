@@ -29,11 +29,11 @@ const UserForm = () => {
             const data = await Api.post("/api/auth/register",
                 {
                     name: nameRef.current.input.value.trim(),
-                    sname: snameRef.current.input.value,
-                    password: passwordRef.current.input.value,
-                    email: emailRef.current.input.value,
-                    username: usernameRef.current.input.value,
-                    phone: phoneRef.current.input.value,
+                    sname: snameRef.current.input.value.trim(),
+                    password: passwordRef.current.input.value.trim(),
+                    email: emailRef.current.input.value.trim(),
+                    username: usernameRef.current.input.value.trim(),
+                    phone: phoneRef.current.input.value.trim(),
                     isAdmin: isAdmin,
                     isActive: true,
                 }

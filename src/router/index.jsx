@@ -7,6 +7,8 @@ import AdminLayout from "../layout/AdminLayout";
 import Dashboard from "../pages/admin/Dashboard";
 import UserList from "../pages/admin/Users/UserList";
 import CreateUser from "../pages/admin/Users/CreateUser";
+import StoreList from "../pages/admin/Stores/StoresList";
+import CreateStore from "../pages/admin/Stores/CreateStore";
 
 
 export const router = createBrowserRouter(
@@ -21,6 +23,8 @@ export const router = createBrowserRouter(
                 < Route index element={<Dashboard />} />
                 < Route path="users" element={<UserList />} />
                 < Route path="create-user" element={<CreateUser />} />
+                < Route path="create-store" element={<CreateStore />} />
+                < Route path="stores" element={<StoreList />} />
             </Route>
         </>
     )

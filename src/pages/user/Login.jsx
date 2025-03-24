@@ -63,10 +63,10 @@ function Login() {
         <form onSubmit={handleLogin} className='flex flex-col  rounded-[20px] h-[350px]  gap-[20px] items-center text-[#fff] py-[50px] justify-center '>
           {
             loading ? <Spin size='large' /> : <>
-              {/* <input value={"elcan@div.edu.az"} ref={credentialRef} type="text" placeholder='Email or Username' autoComplete="email" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' /> */}
-              {/* <input value={"elcan123"} ref={passwordRef} type="password" placeholder='Password' autoComplete="current-password" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' /> */}
-              <input value={"wozagos@mailinator.com"} ref={credentialRef} type="text" placeholder='Email or Username' autoComplete="email" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' />
-              <input value={"Commodi consequatur"} ref={passwordRef} type="password" placeholder='Password' autoComplete="current-password" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' />
+              <input value={"TheLordwOfDarkness"} ref={credentialRef} type="text" placeholder='Username'  className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' />
+              <input value={"elcan123"} ref={passwordRef} type="password" placeholder='Password' autoComplete="current-password" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' />
+              {/* <input value={"wozagos@mailinator.com"} ref={credentialRef} type="text" placeholder='Email or Username' autoComplete="email" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' /> */}
+              {/* <input value={"Commodi consequatur"} ref={passwordRef} type="password" placeholder='Password' autoComplete="current-password" className='border bg-[#fff] text-[#000] outline-0 w-[400px] p-[15px] rounded-[8px]' /> */}
               <button className='bg-[#000] text-[#fff] w-[400px] py-[15px] rounded-[8px]'>Login</button>
             </>
           }

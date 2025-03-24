@@ -1,4 +1,4 @@
-import { Api } from "../../axios/api";
+import { Api } from "../../../axios/api";
 
 export const getAllUsers = async () => {
     try {
