@@ -9,15 +9,17 @@
   margin-left: auto;
 }
 
+.css-ptck8z-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected,
 .MuiPaginationItem-page.css-2ge3ma {
   color: #fff;
-  background: rgba(0, 0, 0, 0.09);
+  background: rgba(0, 0, 0, 0.09) !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.9px);
   -webkit-backdrop-filter: blur(6.9px);
   border: 1px solid #333;
 }
 
+.css-ptck8z-MuiButtonBase-root-MuiPaginationItem-root,
 .MuiPaginationItem-previousNext.css-2ge3ma {
   background-color: #fff !important;
   color: #000;
@@ -137,4 +139,73 @@ svg[data-icon="close"] {
 
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+
+.css-240cud.ant-collapse>.ant-collapse-item>.ant-collapse-header,
+:where(.css-dev-only-do-not-override-240cud).ant-collapse>.ant-collapse-item>.ant-collapse-header {
+  color: #fff;
+}
+
+.css-240cud.ant-collapse .ant-collapse-content,
+:where(.css-dev-only-do-not-override-240cud).ant-collapse .ant-collapse-content {
+  color: #fff;
+}
+
+.css-240cud.ant-popover .ant-popover-inner,
+:where(.css-dev-only-do-not-override-240cud).ant-popover .ant-popover-inner {
+  background-color: #1b1b1e;
+  color: #fff;
+}
+.css-240cud.ant-popover .ant-popover-inner-content,
+:where(.css-dev-only-do-not-override-240cud).ant-popover .ant-popover-inner-content,
+.css-240cud.ant-popover .ant-popover-title,
+:where(.css-dev-only-do-not-override-240cud).ant-popover .ant-popover-title{
+  color: #fff !important;
+}
+
+
+.css-240cud.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector,
+:where(.css-dev-only-do-not-override-240cud).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector{
+  background-color: transparent;
+  color: #fff;
+}
+
+.css-240cud.ant-select-single.ant-select-open .ant-select-selection-item,
+:where(.css-dev-only-do-not-override-240cud).ant-select-single.ant-select-open .ant-select-selection-item{
+  color: #fff;
+}
+
+.css-240cud.ant-select-dropdown .ant-select-item,
+:where(.css-dev-only-do-not-override-240cud).ant-select-dropdown .ant-select-item{
+  background-color: transparent;
+}
+
+.parameter :where(.css-dev-only-do-not-override-240cud).ant-row,
+.parameter .css-240cud.ant-row{
+  flex-direction: column;
+}
+
+.css-240cud.ant-form-item .ant-form-item-label >label ,
+:where(.css-dev-only-do-not-override-240cud).ant-form-item .ant-form-item-label >label {
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.parameter .css-240cud.ant-input-outlined,
+.parameter :where(.css-dev-only-do-not-override-240cud).ant-input-outlined,
+.parameter .css-240cud.ant-input-number-outlined,
+.parameter :where(.css-dev-only-do-not-override-240cud).ant-input-number-outlined{
+  background-color: transparent !important;
+  color:  #FFF;
+  width: 100%;
+}
+:where(.css-dev-only-do-not-override-240cud).ant-input-number .ant-input-number-input
+{
+  color: #fff;
+}
+.parameter{
+  margin-bottom: 0px !important;
 }

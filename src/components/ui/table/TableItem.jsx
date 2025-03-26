@@ -3,18 +3,16 @@ import { FiEdit } from "react-icons/fi";
 import { limitHandler } from '../../../services/data/limitHandler';
 import { useSelector } from 'react-redux';
 
-function TableItem({ index, id, name, default_offer, limits }) {
+function TableItem({ index, id, name, default_offer, limits, default_marketing_name, offers }) {
 
     const findEl = limits?.find(item => item.productId == id)
-    const productLimit = findEl?.limit ? findEl.limit : "0.00"
-
+    const productLimit = findEl?.limit ? findEl?.limit?.toFixed(2) : "0.00"
     const [value, setValue] = useState(productLimit)
-
     const [readOnly, setReadOnly] = useState(true)
     const InpRef = useRef()
     const { storeId } = useSelector(store => store.store)
     const { retail_price, old_price } = default_offer
-
+    const cheapOffer = offers.find(item => item.marketing_name_id == default_marketing_name?.internal_id) || null
 
     const handleEdit = () => {
         if (!readOnly) {
@@ -52,7 +50,8 @@ function TableItem({ index, id, name, default_offer, limits }) {
             <td className=' w-[calc(1.5/12*100%)] '>{id}</td>
             <td className=' w-[calc(5.5/12*100%)] pe-[20px]'>{name}</td>
             <td className=' w-[calc(2/12*100%)]'  >{default_offer?.retail_price}</td>
-            <td className=' w-[calc(2/12*100%)]'  >{default_offer?.old_price ? default_offer?.old_price : default_offer?.retail_price}</td>
+            {/* <td className=' w-[calc(2/12*100%)]'  >{default_offer?.old_price ? default_offer?.old_price : default_offer?.retail_price}</td> */}
+            <td className=' w-[calc(2/12*100%)]'  >{cheapOffer?.retail_price.toFixed(2)} <span className='text-[10px]'>({cheapOffer?.marketing_name?.name})</span></td>
             <td className=' w-[calc(1.5/12*100%)] '>
                 <div className='flex items-center gap-[20px]'>
                     <input ref={InpRef} type="number" value={value} onChange={handleChange} readOnly={readOnly} className={style} />

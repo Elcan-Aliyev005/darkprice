@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 
 import React, { useEffect, useState } from 'react'
 import { Skeleton } from '@mui/material';
-import { Spin } from 'antd';
+import { Select, Spin } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import TableItem from '../../components/ui/table/TableItem';
 import { nanoid } from 'nanoid';
@@ -15,6 +15,7 @@ import StartBtn from '../../components/functional/StartBtn';
 import { setDataIds } from '../../store/data';
 import OffCanvas from '../../components/ui/offcanvas/Offcanvas';
 import HistoryModal from '../../components/ui/modal/HistoryModal';
+import { Option } from 'antd/es/mentions';
 
 function Home() {
 
@@ -63,9 +64,7 @@ function Home() {
 
 
   useEffect(() => {
-
     const localStoreId = JSON.parse(localStorage.getItem("store")).storeId || storeId
-
     setLoading(true);
     (async () => {
       try {
@@ -108,8 +107,9 @@ function Home() {
                   <>
                     <StartBtn startButtonDisabled={startButtonDisabled} showModal={showModal} />
                     <h3 className='text-[26px]'>
-                      {data?.products?.at(0)?.default_offer?.seller?.name.name} {" "}
-                      ({data?.meta?.total})</h3>
+
+                      {data?.products?.at(0)?.default_offer?.seller?.marketing_name.name} {" "}
+                      ({data?.meta?.total_entries})</h3>
                   </>}
               </div>
               <div>
@@ -143,9 +143,11 @@ function Home() {
                     </tr>
                   </thead>
                   <tbody className=''>
-                    {data?.products
-                      ?.filter(item => item.name.toLowerCase().split(" ").some(elem => elem.startsWith(query.toLowerCase())) || item.id.toString().startsWith(query))
-                      ?.map((item, index) => <TableItem key={nanoid()}  {...item} index={index} limits={data?.limits} />)}
+                    {
+                      data?.products
+                        ?.filter(item => item.name.toLowerCase().split(" ").some(elem => elem.startsWith(query.toLowerCase())) || item.id.toString().startsWith(query))
+                        ?.map((item, index) => <TableItem key={nanoid()}  {...item} index={index} limits={data?.limits} />)
+                    }
                   </tbody>
                 </table>
             }
@@ -154,7 +156,7 @@ function Home() {
           </div>
           <div id='pagination' className='flex items-center mt-[10px] gap-[10px] justify-center text-[#fff]'>
             <Stack spacing={2}>
-              <Pagination count={Math.ceil(data?.meta?.total / 20) || 1} page={page} variant="outlined" className='text-[red]' shape="rounded" onChange={handleChange} />
+              <Pagination count={Math.ceil(data?.meta?.total_pages) || 1} page={page} variant="outlined" className='text-[red]' shape="rounded" onChange={handleChange} />
             </Stack>
           </div>
         </div>
