@@ -36,7 +36,7 @@ function StoreList() {
             </div>
             : (
               <div className='flex items-center flex-wrap  gap-[30px]'>
-                {stores.map(item => <StoreCard key={nanoid()} {...item} />)}
+                {stores?.map(item => <StoreCard key={nanoid()} {...item} />) ?? "Empty"}
               </div>
 
             )}

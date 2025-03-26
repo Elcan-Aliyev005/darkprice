@@ -12,7 +12,7 @@ function TableItem({ index, id, name, default_offer, limits, default_marketing_n
     const InpRef = useRef()
     const { storeId } = useSelector(store => store.store)
     const { retail_price, old_price } = default_offer
-    const cheapOffer = offers.find(item => item.marketing_name_id == default_marketing_name?.internal_id) || null
+    const cheapOffer = offers?.find(item => item.marketing_name_id == default_marketing_name?.internal_id) || null
 
     const handleEdit = () => {
         if (!readOnly) {

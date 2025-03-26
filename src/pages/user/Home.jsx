@@ -108,7 +108,7 @@ function Home() {
                     <StartBtn startButtonDisabled={startButtonDisabled} showModal={showModal} />
                     <h3 className='text-[26px]'>
 
-                      {data?.products?.at(0)?.default_offer?.seller?.marketing_name.name} {" "}
+                      {data?.products?.at(0)?.default_offer?.seller?.marketing_name?.name || "Genci Store"} {" "}
                       ({data?.meta?.total_entries})</h3>
                   </>}
               </div>

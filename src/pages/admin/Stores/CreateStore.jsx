@@ -8,7 +8,6 @@ function CreateStore() {
             <Title title={"Create a new Store"}/>
             <div className='p-[50px]'>
                 <StoreForm />
-
             </div>
         </div>
     )

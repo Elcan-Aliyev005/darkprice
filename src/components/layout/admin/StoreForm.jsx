@@ -136,7 +136,8 @@ const StoreForm = () => {
                         >
                             <Select onChange={setOwner} className='!h-[44px]' placeholder="Please select an owner">
                                 {
-                                    users.map(user => <Option key={nanoid()} value={user._id}>{user.name} {user.sname}</Option>)
+                                    users?.map(user => <Option key={nanoid()} value={user._id}>{user.name} {user.sname}</Option>) 
+                                    ?? <Option>Empty</Option>
                                 }
                             </Select>
                         </Form.Item>

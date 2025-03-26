@@ -8,7 +8,6 @@ function CreateUser() {
             <Title title={"Create a new User"}/>
             <div className='p-[50px]'>
                 <UserForm />
-
             </div>
         </div>
     )

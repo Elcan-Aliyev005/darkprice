@@ -37,7 +37,7 @@ function UserList() {
             </div>
             : (
               <div className='flex items-center flex-wrap  gap-[30px]'>
-                {users.map(item => <UserCard key={nanoid()} {...item} />)}
+                {users?.map(item => <UserCard key={nanoid()} {...item} />) ?? 'Empty'}
               </div>
 
             )}
